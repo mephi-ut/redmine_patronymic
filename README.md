@@ -1,4 +1,13 @@
-redmine_patronymic
-==================
+patronymic
+==========
 
-Adds support of "lastname firstname patronymic" display format
+license
+-------
+
+GPLv3+
+
+howto use
+---------
+
+Create an user custom field "Отчество" and fill it. After that enable this
+plugin and go to "/settings?tab=display" in browser.
