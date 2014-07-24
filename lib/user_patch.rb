@@ -24,7 +24,7 @@ end
 User::USER_FORMATS.merge!(
   :lastname_firstname_patronymic => {
       :string => '#{lastname} #{firstname} #{get_patronymic}',
-      :order => %w(lastname firstname get_patronymic id),
+      :order => %w(lastname firstname id),
       :setting_order => 8
     }
 )
