@@ -28,6 +28,11 @@ User::USER_FORMATS.merge!(
       :setting_order => 8
     },
   :lastname_letterfirstname_letterpatronymic => {
+      :string => '#{lastname} #{firstname[0,1]} #{get_patronymic.nil? ? "" : get_patronymic[0,1]}',
+      :order => %w(lastname firstname id),
+      :setting_order => 8
+    },
+  :lastname_letterfirstname_letterpatronymic_2 => {
       :string => '#{lastname} #{firstname[0,1]}#{get_patronymic.nil? ? "" : get_patronymic[0,1]}',
       :order => %w(lastname firstname id),
       :setting_order => 8
