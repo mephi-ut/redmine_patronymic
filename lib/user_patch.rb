@@ -22,6 +22,11 @@ module PatronymicPluginUserPatch
 end
 
 User::USER_FORMATS.merge!(
+  :lastname_letterfirstname_letterpatronymicfromfirstname => {
+      :string => '#{lastname} #{firstname[0,1]}#{firstname.split(/ /)[1].nil? ? "" : " #{firstname.split(/ /)[1][0,1]}"}',
+      :order => %w(lastname firstname id),
+      :setting_order => 8
+    },
   :lastname_firstname_patronymic => {
       :string => '#{lastname} #{firstname} #{get_patronymic}',
       :order => %w(lastname firstname id),
